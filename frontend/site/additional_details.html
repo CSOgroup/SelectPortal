@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat:700&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link href="https://unpkg.com/vis-network@latest/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.colVis.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/vis-network@latest/dist/vis-network.min.js"></script>
+
+</head>
+<body data-title="alteration_info">
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-indigo w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="menu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white" style="font-family: 'Caveat', cursive;">SELECT-Portal</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Contact Us</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">About</a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Home</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="../index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+  </div>
+</div>
+
+<!--Result Page Content -->
+<div class="w3-container w3-margin-top w3-padding-48">
+  <div class="w3-container">
+    <div class="w3-twothird">
+      <div class="w3-row">
+        <!-- Gene Description  -->
+        <div class="w3-card w3-topbar w3-bottombar w3-border-blue" id="gene_info">
+          <h4 class="w3-center">Gene Searched: <b>{{gene}}</b></h4>
+          <hr>
+          <ul class="w3-ul">
+            <li class="w3-padding-small"><b>RefSeq:</b> <a href="https://www.ncbi.nlm.nih.gov/nuccore/{{refsec}}">{{refsec}}</a></li>
+            <li class="w3-padding-small"><b>Gene ID:</b> <a href="https://www.ncbi.nlm.nih.gov/gene/{{gene_id}}">{{gene_id}}</a></li>
+            <li class="w3-padding-small"><b>Type:</b> {{category}} </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w3-row w3-padding-16 w3-margin-bottom">
+        <!-- Alteration Description  -->
+        <div class="w3-card w3-topbar w3-bottombar w3-border-blue w3-margin-bottom" id="alteration_info">
+          <h4 class="w3-center"><span class="w3-medium">Evolutionary Dependency Info:</span> <b>{{SFE_1}}</b>-<b>{{SFE_2}}</b></h4>
+          <hr>
+          <!-- Table result -->
+          <div class="w3-container w3-margin-bottom" >
+            <table class="table table-striped table-bordered" id="alteration_table" width="100%" style="font-size:13px">
+              <thead>
+              <tr>
+                <th class="all">SFE-1</th>
+                <th class="all">SFE-2</th>
+                <th>Gene 1</th>
+                <th>Gene 2</th>
+                <th>Direction</th>
+                <th class="desktop">Select Score</th>
+                <th> wMI p-value</th>
+                <th >Significance</th>
+                <th class="all">Cancer</th>
+                <th >Max Overlap </th>
+                <th >Frequency Overlap </th>
+              </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row w3-padding-16 w3-margin-bottom">
+        <div class="w3-card w3-topbar w3-bottombar w3-border-blue w3-margin-bottom" id="alteration_info1">
+            <h4 class="w3-center"><span class="w3-medium">Screening Info:</span> <b>{{SFE_1}}</b>-<b>{{SFE_2}}</b></h4>
+            <hr>
+            <!-- Table result -->
+            <div class="w3-container w3-margin-bottom" >
+              <table class="table responsive nowrap table-striped table-bordered" id="screeing_table" width="100%" style="font-size:13px">
+                <thead>
+                <tr>
+                  <th >SFE-1</th>
+                  <th >SFE-2</th>
+                  <th >Gene 1</th>
+                  <th >Gene 2</th>
+                  <th >Direction</th>
+                  <th class="desktop">Knockout Gene</th>
+                  <th class="all">lev</th>
+                  <th >reduce_dep</th>
+                  <th >p_anova</th>
+                  <th >bf</th> 
+                  <th >important_diff</th>
+                  <th >important_posthoc_anova_p</th>
+                  <th >important_normalized_effect_diff</th>
+                  <th >important_posthoc_bf_direct</th>
+                  <th >important_posthoc_bf_indirect</th>
+                  <th class="all" >experiment</th>
+                  <th class="all" >Show Plot</th>
+
+                </tr>
+                </thead>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-rest w3-row w3-padding-small">
+      <div class="w3-row">
+        <div class="w3-card">
+          <header class="w3-container w3-blue w3-padding-small">
+            <h4 class="w3-center">Screening Box Plot</h4>
+          </header>
+          <div class="w3-container w3-center">
+            <p> Select an entry on the screening tabel to see a box plot</p>
+            <div>
+              <img id="screeing_image" alt="" class="responsive"> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w3-container w3-margin-top w3-padding-48">
+  <div class="w3-container">
+    <div class="w3-twothird">
+        <!-- Alteration Screening -->
+     </div>
+  </div>
+</div>
+<!--  Footer Element-->
+<footer class="w3-center w3-white ">
+  <p>Copyright © 2019 &nbsp; <br> All rights reserved.</p>
+  <p><img alt="" src="img/cso_small_v1.png"></p>
+</footer>
+<script src="js/vendor/modernizr-3.7.1.min.js"></script>
+<script src="js/w3.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+
+  backend:
+    build: ./backend
+    container_name: select_backend
+    restart: always
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build: ./frontend
+    container_name: select_frontend
+    restart: always
+    ports:
+      - 8080:8080    

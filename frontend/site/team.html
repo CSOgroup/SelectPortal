@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat:700&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <!--    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+  <!--    <script src="https://unpkg.com/@trevoreyre/autocomplete-vue"></script>-->
+  <!--  &lt;!&ndash; production version, optimized for size and speed &ndash;&gt;-->
+  <!--  <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+  <title>Contact</title>
+</head>
+<body>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-purple w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-purple" href="javascript:void(0);" onclick="menu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white" style="font-family: 'Caveat', cursive;">SELECT-DB</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Contact Us</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">About</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Home</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About</a>
+    <a href="team.html" class="w3-bar-item w3-button w3-padding-large">Team</a>
+  </div>
+</div>
+<!-- Team Section -->
+<div class="w3-container" style="padding:64px 16px" id="team">
+  <h3 class="w3-center w3-text-deep-orange">THE TEAM</h3>
+<!--  <p class="w3-center w3-large">.....</p>-->
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="img/team.png" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="img/team.png" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">Art Director</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="img/team.png" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">Web Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="img/team.png" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  Footer Element-->
+<footer class="w3-center w3-white ">
+  <p>Copyright © 2019 &nbsp; <br> All rights reserved.</p>
+  <p><img alt="" src="img/cso_small_v1.png"></p>
+</footer>
+
+<script src="js/vendor/modernizr-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

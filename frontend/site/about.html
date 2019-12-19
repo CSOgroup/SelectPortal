@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat:700&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+<!--    <script src="https://unpkg.com/@trevoreyre/autocomplete-vue"></script>-->
+    <!--  &lt;!&ndash; production version, optimized for size and speed &ndash;&gt;-->
+    <!--  <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <title>About</title>
+</head>
+<body>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-indigo w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="menu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white" style="font-family: 'Caveat', cursive;">SELECT-Portal</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Contact Us</a>
+<!--     <a href="team.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Team</a> -->
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Home</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="../index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <!-- <a href="team.htm;" class="w3-bar-item w3-button w3-padding-large">Team</a> -->
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+  </div>
+</div>
+<!-- Header Element  -->
+<header class="w3-margin-top w3-padding-48 w3-center">
+  <!--    style="background:url('img/background_logo.gif') no-repeat; background-size: 100%; background-size:cover; top:15%; height: 300px"-->
+  <div class="w3-display-container" >
+    <h1 class="w3-animate-opacity" style="font-family: 'Caveat', cursive ;text-align: center;">SELECT-Portal</h1>
+    <p class="w3-center"> Selected Events Linked by Evolutionary Conditions across Human Tumors</p>
+  </div>
+</header>
+
+<!-- First Grid -->
+<div class="w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>SELECT Portal</h1>
+      <h5 class="w3-padding-32">SELECT is a computational methodology to identify mutual exclusive and co-occurrent interactions between functional alterations in cancer.
+      </h5><p style="text-align: justify;">Cancer evolves through the emergence and selection of molecular alterations. Cancer genome profiling has revealed that specific events are more or less likely to be co-selected, suggesting that the selection of one event depends on the others. However, the nature of these evolutionary dependencies and their impact remain unclear. Here, we designed SELECT, an algorithmic approach to systematically identify evolutionary dependencies from alteration patterns. By analyzing 6,456 genomes from multiple tumor types, we constructed a map of oncogenic dependencies associated with cellular pathways, transcriptional readouts, and therapeutic response. Finally, modeling of cancer evolution shows that alteration dependencies emerge only under conditional selection. These results provide a framework for the design of strategies to predict cancer progression and therapeutic response.</p>
+    </div>
+    <div class="w3-third w3-center">
+      <img class="w3-margin-top w3-padding-64" src="img/select_image.jpg" style="width: 90%">
+     </div>
+  </div>
+</div>
+
+<!--  Footer Element-->
+<footer class="w3-center w3-white w3-padding-64">
+  <p>Copyright © 2019 &nbsp; <br> All rights reserved.</p>
+  <p><img alt="" src="img/cso_small_v1.png"></p>
+</footer>
+
+<script src="js/vendor/modernizr-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

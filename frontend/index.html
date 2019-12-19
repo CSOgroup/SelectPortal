@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>SELECT-Portal</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site/site.webmanifest">
+  <link rel="apple-touch-icon" href="site/icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="site/css/normalize.css">
+  <link rel="stylesheet" href="site/css/main.css">
+  <link rel="stylesheet" href="site/css/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat:700&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <!--  &lt;!&ndash; production version, optimized for size and speed &ndash;&gt;-->
+  <!--  <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+</head>
+
+<body data-title="index">
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-indigo w3-card w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="menu()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white" style="font-family: 'Caveat', cursive;">SELECT-Portal</a>
+      <a href="site/contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Contact Us</a>
+      <a href="site/about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">About</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="site/about.html" class="w3-bar-item w3-button w3-padding-large">About</a>
+      <a href="site/contact.html" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+    </div>
+  </div>
+  <!-- Header Element  -->
+  <header class="w3-margin-top w3-padding-64 w3-center">
+    <div class="w3-display-container" >
+        <h1 class="w3-animate-opacity" style="font-family: 'Caveat', cursive ;text-align: center;">SELECT-Portal</h1>
+        <div class="w3-row">
+          <div class="w3-third">
+            <p></p>
+          </div>
+          <div class="w3-third">
+              <p class="w3-display-middle w3-panel w3-border-top w3-border-bottom w3-border-blue"> Selected Events Linked by Evolutionary Conditions across Human Tumors</p>            
+          </div>
+          <div class="w3-third">
+            <p></p>
+          </div>
+        </div>
+        <p>Genes: <span class="w3-badge  w3-margin-right">567</span>Tumors: <span class="w3-badge w3-margin-right">32</span>Evolutionary Dependencies: <span class="w3-badge"> 856 </span></p>
+    </div>
+  </header>
+  <!-- Search Bar -->
+  <div class="w3-content w3-center">
+        <h5 class="w3-center" style="font-family: 'Comic Sans MS', cursive, sans-serif;"><b>~ Search By ~</b></h5>
+        <div class="w3-margin-bottom">
+          <form id="searchForm" autocomplete="off">
+            <label class="radio-inline ">
+                <input class="w3-radio" type="radio" name="options" id="option1" value="gene" autocomplete="off" checked="">By Hugo Gene Name
+            </label>
+            <label class="radio-inline">
+                <input class="w3-radio" type="radio" name="options" id="option2" value="tumor" autocomplete="off">By Tumor Project Code
+            </label>
+            <br>
+            <br>
+            <div class="autocomplete" style="width:500px;">
+              <input id="keyword" type="text" name="search" placeholder="Search keyword in the database">
+            </div>
+            <input type="submit">
+          </form>
+        </div>
+  </div>
+  <p class="w3-center w3-small">When using SELECT-Portal, please cite: <a href="#" class="w3-text-blue">Mina et.al</a></p>
+  <!--  Footer Element-->
+  <footer class="w3-center w3-white w3-padding-16">
+    <p><img alt="" src="site/img/cso_small_v1.png"></p>
+    <p class="w3-small">Copyright © 2019 &nbsp; <br> All rights reserved.</p>
+  </footer>
+  <script src="site/js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="site/js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="site/js/plugins.js"></script>
+  <script src="site/js/w3.js"></script>
+  <script src="site/js/main.js"></script>
+  <!--  &lt;!&ndash; Google Analytics: change UA-XXXXX-Y to be your site's ID. &ndash;&gt;-->
+  <!--  <script>-->
+  <!--    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;-->
+  <!--    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')-->
+  <!--  </script>-->
+  <!--  <script src="https://www.google-analytics.com/analytics.js" async></script>-->
+</body>
+</html>
+
